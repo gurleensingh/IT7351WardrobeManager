@@ -109,7 +109,7 @@ public class Convertor extends javax.swing.JFrame {
                 .addContainerGap(52, Short.MAX_VALUE))
         );
 
-        jTextField1.setText("Enter a Value");
+        jTextField1.setText("Enter Value");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
