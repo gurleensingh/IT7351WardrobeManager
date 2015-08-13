@@ -271,6 +271,14 @@ public class Convertor extends javax.swing.JFrame {
             float kel = (float) (cel+273.15);
             jTextField2.setText(""+kel);
         }
+        
+        if (jRadioButton2.isSelected ()&&tx.equals("Celsius"))
+            {
+            String text = jTextField1.getText();
+            float fah = Float.parseFloat (text);
+            float cel = (float) ((float)(fah-32)/18);
+            jTextField2.setText(""+cel);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
