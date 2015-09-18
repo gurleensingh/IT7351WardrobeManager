@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="254dp"
+        android:layout_y="14dp"
+        android:text="@string/Logout"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="116dp"
+        android:layout_y="12dp"
+        android:text="@string/E_Closet"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="16dp"
+        android:layout_height="15dp"
+        android:layout_x="22dp"
+        android:layout_y="19dp"
+        android:contentDescription="@string/plus_sign"
+        android:src="@drawable/plus_sign" />
+
+      <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="197dp"
+        android:layout_y="407dp"
+        android:src="@drawable/packing_icon" android:contentDescription="packing"/>
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="70dp"
+        android:layout_y="401dp"
+        android:src="@drawable/box_icon" android:contentDescription="box"/>
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="258dp"
+        android:layout_y="406dp"
+        android:src="@drawable/icon_help" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="9dp"
+        android:layout_y="403dp"
+        android:contentDescription="@string/home"
+        android:src="@drawable/home_icon" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="133dp"
+        android:layout_y="403dp"
+        android:contentDescription="calender"
+        android:src="@drawable/calendar_month" />
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="7dp"
+        android:layout_y="207dp"
+        android:text="@string/Date_of_Purchase"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="184dp"
+        android:text="@string/Location"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10dp"
+        android:layout_y="137dp"
+        android:text="@string/Item_View"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10dp"
+        android:layout_y="161dp"
+        android:text="@string/Dress_code"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="6dp"
+        android:layout_y="228dp"
+        android:text="@string/colour"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="273dp"
+        android:text="@string/last_access_date"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="6dp"
+        android:layout_y="251dp"
+        android:text="@string/Brand"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10dp"
+        android:layout_y="112dp"
+        android:text="@string/season"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="13dp"
+        android:layout_y="89dp"
+        android:text="@string/Title"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="108dp"
+        android:layout_height="20dp"
+        android:layout_x="160dp"
+        android:layout_y="92dp"
+        android:ems="10"
+        android:inputType="none" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="123dp"
+        android:layout_y="44dp"
+        android:text="@string/inventory"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="144dp"
+        android:layout_height="18dp"
+        android:layout_x="146dp"
+        android:layout_y="90dp"
+        android:ems="10"
+        android:inputType="Title" >
+
+        <requestFocus />
+    </EditText>
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="142dp"
+        android:layout_height="23dp"
+        android:layout_x="144dp"
+        android:layout_y="106dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="142dp"
+        android:layout_height="23dp"
+        android:layout_x="144dp"
+        android:layout_y="131dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="142dp"
+        android:layout_height="24dp"
+        android:layout_x="144dp"
+        android:layout_y="154dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="141dp"
+        android:layout_height="22dp"
+        android:layout_x="145dp"
+        android:layout_y="181dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
+
+    <DatePicker
+        android:id="@+id/date_picker"
+        android:layout_width="48dp"
+        android:layout_height="23dp"
+        android:layout_x="239dp"
+        android:layout_y="210dp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="66dp"
+        android:layout_height="12dp"
+        android:layout_x="162dp"
+        android:layout_y="207dp"
+        android:ems="10"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="134dp"
+        android:layout_height="12dp"
+        android:layout_x="155dp"
+        android:layout_y="234dp"
+        android:ems="10"
+        android:inputType="colour" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="134dp"
+        android:layout_height="15dp"
+        android:layout_x="150dp"
+        android:layout_y="256dp"
+        android:ems="10"
+        android:inputType="brand" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="105dp"
+        android:layout_y="298dp"
+        android:text="@string/Add_item" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="115dp"
+        android:layout_y="72dp"
+        android:text="@string/item_code"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_x="24dp"
+        android:layout_y="368dp"
+        android:text="@string/undo" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="69dp"
+        android:layout_height="33dp"
+        android:layout_x="206dp"
+        android:layout_y="366dp"
+        android:text="@string/done" />
+
+</AbsoluteLayout>
+
