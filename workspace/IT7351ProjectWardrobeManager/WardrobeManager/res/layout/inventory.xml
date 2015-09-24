@@ -1,0 +1,544 @@
+<com.example.wardrobemanager.CustomLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/parentLayout"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0" >
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"
+            android:text="Add"
+            android:clickable="true"
+            android:onClick="Picture"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:text="WardrobeManager"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="Logout"
+            android:padding="10dp"
+            android:text="@string/logout"
+            android:textColor="#3d6399" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTop"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/static1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Inventory"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAddItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/static1"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:onClick="AddAnItem"
+            android:padding="10dp"
+            android:text="Add an item"
+            android:textColor="@android:color/black"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/llForAdding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llBelow"
+        android:layout_below="@+id/llName"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Add new item to Inventory"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:gravity="left"
+                    android:text="Title"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/edTitle"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp" 
+                    android:background="@drawable/textfield"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.7"
+                    android:gravity="left"
+                    android:text="Season"
+                    android:textColor="@android:color/black" />
+
+                <Spinner
+                    android:id="@+id/spinnerSeason"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.7"
+                    android:gravity="left"
+                    android:text="Type of item"
+                    android:textColor="@android:color/black" />
+
+                <Spinner
+                    android:id="@+id/spinnerItem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.7"
+                    android:gravity="left"
+                    android:text="Date of Purchase"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/edDateOfPurchase"
+                    android:layout_width="0dp"
+                    android:clickable="true" 
+                    android:singleLine="true"
+                    android:paddingLeft="10dp" 
+                    android:background="@drawable/textfield"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.7"
+                    android:gravity="left"
+                    android:text="Brand"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/edBrand"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp" 
+                    android:background="@drawable/textfield"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.7"
+                    android:gravity="left"
+                    android:text="Dress Code"
+                    android:textColor="@android:color/black" />
+
+                <Spinner
+                    android:id="@+id/spinnerdressCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.7"
+                    android:gravity="left"
+                    android:text="Location"
+                    android:textColor="@android:color/black" />
+
+                <Spinner
+                    android:id="@+id/spinnerlocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.7"
+                    android:gravity="left"
+                    android:text="Color"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/edColor"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp" 
+                    android:background="@drawable/textfield"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.7"
+                    android:gravity="left"
+                    android:text="Last Accessed Date"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/edLastAccessedDate"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"
+                    android:inputType="textPassword"
+                    android:background="@drawable/textfield"
+                    android:textColor="@android:color/black" 
+                    android:clickable="true"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/login_btn_h"
+                android:onClick="AddItemToDb"
+                android:text="Add Item" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:onClick="backToDisplay"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/back_btn_h"
+                android:text="back"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llForDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llBelow"
+        android:layout_below="@+id/llName"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llName"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvClothes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Clothes"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvFootwear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Footwear"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvAccessories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Accessories"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvBags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Bags"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llName"
+            android:orientation="vertical" >
+
+            <GridView
+                android:id="@+id/gridClothes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:scrollbarStyle="outsideOverlay"
+                android:verticalScrollbarPosition="right"
+                android:verticalSpacing="10dp" />
+
+            <GridView
+                android:id="@+id/gridBags"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:scrollbarStyle="outsideOverlay"
+                android:verticalScrollbarPosition="right"
+                android:verticalSpacing="10dp"
+                android:visibility="gone" />
+
+            <GridView
+                android:id="@+id/gridFootwear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:scrollbarStyle="outsideOverlay"
+                android:verticalScrollbarPosition="right"
+                android:verticalSpacing="10dp"
+                android:visibility="gone" />
+
+            <GridView
+                android:id="@+id/gridAccesories"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:scrollbarStyle="outsideOverlay"
+                android:verticalScrollbarPosition="right"
+                android:verticalSpacing="10dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/llBelow"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/llBelow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:weightSum="5" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@drawable/home_icon"
+            android:gravity="center"
+            android:onClick="Home"
+            android:text="Home"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@drawable/box_icon"
+            android:gravity="center"
+            android:onClick="Inventory"
+            android:text="Inventory"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@drawable/calendar_month"
+            android:gravity="center"
+            android:onClick="Calendar"
+            android:text="Calendar"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@drawable/packing_icon"
+            android:gravity="center"
+            android:padding="5dp"
+            android:onClick="Packing"
+            android:text="Packing"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@drawable/icon_help"
+            android:gravity="center"
+            android:onClick="Help"
+            android:text="Help"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+</com.example.wardrobemanager.CustomLayout>
